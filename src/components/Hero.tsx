@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import gymHero from "@/assets/gym-hero.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -41,7 +44,7 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in">
-              <Button variant="hero" size="xl" className="group">
+              <Button variant="hero" size="xl" className="group" onClick={() => navigate('/membership')}>
                 Start Your Journey
                 <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -49,6 +52,7 @@ const Hero = () => {
                 variant="outline-hero" 
                 size="xl"
                 className="group bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-gym-black"
+                onClick={() => navigate('/book')}
               >
                 <Play className="mr-2 h-5 w-5" />
                 Watch Tour
@@ -90,7 +94,7 @@ const Hero = () => {
                   Start your fitness journey
                 </div>
               </div>
-              <Button variant="default" className="w-full mt-6 bg-white text-gym-black hover:bg-gray-100">
+              <Button variant="default" className="w-full mt-6 bg-white text-gym-black hover:bg-gray-100" onClick={() => navigate('/membership')}>
                 Get Started Now
               </Button>
             </div>

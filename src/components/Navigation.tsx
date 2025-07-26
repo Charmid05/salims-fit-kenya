@@ -50,16 +50,26 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Phone className="h-4 w-4" />
-              <span>+254 769943055</span>
+              <a href="tel:+254769943055" className="hover:text-primary transition-colors">
+                +254 769943055
+              </a>
             </div>
             <div className="flex items-center space-x-2">
-              <Facebook className="h-5 w-5 text-gray-600 hover:text-primary transition-colors cursor-pointer" />
-              <Instagram className="h-5 w-5 text-gray-600 hover:text-primary transition-colors cursor-pointer" />
-              <Twitter className="h-5 w-5 text-gray-600 hover:text-primary transition-colors cursor-pointer" />
+              <a href="https://facebook.com/salimsfinness" target="_blank" rel="noopener noreferrer">
+                <Facebook className="h-5 w-5 text-gray-600 hover:text-primary transition-colors cursor-pointer" />
+              </a>
+              <a href="https://instagram.com/salimsfinness" target="_blank" rel="noopener noreferrer">
+                <Instagram className="h-5 w-5 text-gray-600 hover:text-primary transition-colors cursor-pointer" />
+              </a>
+              <a href="https://twitter.com/salimsfinness" target="_blank" rel="noopener noreferrer">
+                <Twitter className="h-5 w-5 text-gray-600 hover:text-primary transition-colors cursor-pointer" />
+              </a>
             </div>
-            <Button variant="hero" size="sm">
-              Join Now
-            </Button>
+            <Link to="/membership">
+              <Button variant="hero" size="sm">
+                Join Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -95,15 +105,21 @@ const Navigation = () => {
               <div className="px-3 py-2 space-y-2">
                 <div className="flex items-center space-x-2 text-sm text-gray-600">
                   <Phone className="h-4 w-4" />
-                  <span>+254 769943055</span>
+                  <a href="tel:+254769943055" className="hover:text-primary transition-colors">
+                    +254 769943055
+                  </a>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-gray-600">
                   <Mail className="h-4 w-4" />
-                  <span>Salimkhamis375@gmail.com</span>
+                  <a href="mailto:Salimkhamis375@gmail.com" className="hover:text-primary transition-colors">
+                    Salimkhamis375@gmail.com
+                  </a>
                 </div>
-                <Button variant="hero" size="sm" className="w-full">
-                  Join Now
-                </Button>
+                <Link to="/membership">
+                  <Button variant="hero" size="sm" className="w-full">
+                    Join Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Star, Crown, Zap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const MembershipPlans = () => {
+  const navigate = useNavigate();
+  
   const plans = [
     {
       name: "Basic",
@@ -123,6 +126,7 @@ const MembershipPlans = () => {
                   variant={plan.buttonVariant} 
                   className="w-full" 
                   size="lg"
+                  onClick={() => navigate('/book')}
                 >
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </Button>

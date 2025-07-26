@@ -3,8 +3,11 @@ import Footer from "@/components/Footer";
 import MembershipPlans from "@/components/MembershipPlans";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Clock, Users, Shield } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Membership = () => {
+  const navigate = useNavigate();
+  
   const benefits = [
     {
       icon: <Clock className="h-8 w-8" />,
@@ -132,10 +135,10 @@ const Membership = () => {
             Join hundreds of satisfied members who have transformed their lives at Salims' Fitness.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-hero">
+            <button className="btn-hero" onClick={() => navigate('/book')}>
               Join Now - Get Started
             </button>
-            <button className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gym-black px-8 py-4 rounded-lg font-bold transition-all duration-300">
+            <button className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gym-black px-8 py-4 rounded-lg font-bold transition-all duration-300" onClick={() => navigate('/book')}>
               Book Free Tour
             </button>
           </div>

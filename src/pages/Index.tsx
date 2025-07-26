@@ -5,10 +5,13 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dumbbell, Users, Trophy, Heart, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import personalTraining from "@/assets/personal-training.jpg";
 import gymEquipment from "@/assets/gym-equipment.jpg";
 
 const Index = () => {
+  const navigate = useNavigate();
+  
   const features = [
     {
       icon: <Dumbbell className="h-12 w-12" />,
@@ -88,7 +91,7 @@ const Index = () => {
                 environment for achieving your fitness goals, whether you're just starting out or looking 
                 to take your training to the next level.
               </p>
-              <Button variant="outline-hero" size="lg" className="group">
+              <Button variant="outline-hero" size="lg" className="group" onClick={() => navigate('/about')}>
                 Learn More About Us
                 <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -159,7 +162,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <Button variant="hero" size="lg" className="group">
+              <Button variant="hero" size="lg" className="group" onClick={() => navigate('/book')}>
                 Book Your Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -179,13 +182,14 @@ const Index = () => {
             Your journey to a healthier, stronger you starts now.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="xl" className="bg-white text-gym-black hover:bg-gray-100">
+            <Button variant="default" size="xl" className="bg-white text-gym-black hover:bg-gray-100" onClick={() => navigate('/membership')}>
               Start Your Membership
             </Button>
             <Button 
               variant="outline-hero" 
               size="xl"
               className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-gym-black"
+              onClick={() => navigate('/book')}
             >
               Book Free Tour
             </Button>

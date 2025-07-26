@@ -61,7 +61,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Gym brand colors
+				'gym-red': 'hsl(var(--gym-red))',
+				'gym-red-dark': 'hsl(var(--gym-red-dark))',
+				'gym-black': 'hsl(var(--gym-black))',
+				'gym-dark-grey': 'hsl(var(--gym-dark-grey))',
+				'gym-light-grey': 'hsl(var(--gym-light-grey))'
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-red': 'var(--gradient-red)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -88,7 +98,20 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fadeIn 0.6s ease-out',
+				'slide-up': 'slideUp 0.6s ease-out',
+				'bounce-slow': 'bounce 2s infinite'
+			},
+			keyframes: {
+				fadeIn: {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				slideUp: {
+					'0%': { transform: 'translateY(100px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				}
 			}
 		}
 	},
